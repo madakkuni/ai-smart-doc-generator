@@ -1,0 +1,94 @@
+# tech_config.yaml
+# Complete list of supported technologies and databases for the project.
+# This file can be easily updated or dynamically read to expand project capabilities.
+
+mobile_and_game_development:
+  - Flutter
+  - Unity
+  - Flutter (Dart)
+  - React Native
+  - Swift
+  - Kotlin (Android Native)
+
+ai_and_models:
+  - OpenAI (GPT models)
+  - Anthropic (Claude)
+  - Google (Gemini)
+  - Meta (Llama)
+  - Mistral AI
+  - CrewAI
+  - LangChain
+  - LlamaIndex
+
+ai_concepts_and_tools:
+  - Vector Database
+  - Embeddings
+  - Prompt Engineering
+  - AI / RAG
+
+web_stacks_and_languages:
+  - React + FastAPI + PostgreSQL
+  - Next.js + Node.js
+  - MERN Stack
+  - Python + AI
+  - Go + Cloud
+  - TypeScript + Next.js
+  - Rust + Systems
+  - Java + Spring Boot
+  - Python
+  - Flask
+  - Django
+  - FastAPI
+  - TypeScript
+  - JavaScript
+  - HTML
+  - CSS
+  - Bootstrap
+  - React / Next.js
+  - Docker
+
+workflow_and_rpa:
+  - Power Automate Cloud
+  - Power Automate Desktop
+  - Selenium
+
+scripting:
+  - PowerShell
+  - Python
+
+databases:
+  relational:
+    - PostgreSQL
+    - MySQL
+    - Microsoft SQL Server
+    - Oracle Database
+    - MariaDB
+    - SQLite
+    - Amazon Aurora
+    - CockroachDB
+    - YugabyteDB
+    
+  nosql:
+    - MongoDB
+    - Cassandra
+    - Redis
+    - Memcached
+    - DynamoDB
+    - Riak
+    - Aerospike
+    - CouchDB
+    - Couchbase
+    - Firebase Firestore
+    - RavenDB
+    - HBase
+    - ArangoDB
+
+  vector:
+    - Pinecone
+    - Weaviate
+    - Qdrant
+    - Chroma
+    - FAISS
+    - Milvus
+    - Vespa
+    - LanceDB
