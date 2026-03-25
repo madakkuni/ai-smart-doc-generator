@@ -1,6 +1,6 @@
 # 📄 Smart Document Generator
 
-The Smart Document Generator is a production-ready Streamlit application that automatically analyzes an uploaded ZIP project and generates intelligent documentation (Functional, Technical, or Architecture overviews) using LangChain and OpenAI. 
+The Smart Document Generator is a production-ready application that automatically analyzes an uploaded ZIP project and generates intelligent documentation (Functional, Technical, or Architecture overviews). 
 
 It is capable of automatically detecting the project's technology stack, classifying the project type, and reading file structures to create comprehensive Markdown reports.
 
