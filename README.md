@@ -11,7 +11,6 @@ It is capable of automatically detecting the project's technology stack, classif
 - **Dynamic Technical Layering**: Uniquely groups the "Technology Stack" in Technical Documentation into perfectly categorized logical layers tailored to the codebase (e.g., grouping Automation Platforms vs. Scripting Execution Environments).
 - **Granular Functional Extraction**: Strictly extracts every atomic API call, conditional logical branch (If Yes/No), and targeted notification flow natively from complex sources like Microsoft Logic JSONs and loops.
 - **Cost & API Usage Tracking**: Integrates `langchain_community` callbacks to securely monitor, log, and aggregate LLM token usage (Prompt, Completion, Total) across concurrent agent tasks, displaying live metrics in the Streamlit UI.
-- **Stringent Data & PII Sanitization**: Operates under strict system prompts and backend scripts to heavily mask APIs, Personally Identifiable Information (emails/names), customer identifiers, and URLs during the documentation synthesis.
 - **Hybrid AI Pipeline**: Orchestrates parallel `langchain` chains backed by OpenAI models to synchronously generate multidimensional documentation.
 
 ## Setup Instructions
@@ -71,8 +70,8 @@ When a `.zip` project is uploaded to the application, it goes through a rigorous
 
 The true intelligence of the Smart Document Generator resides within its extensively engineered prompt templates (located in the `prompts/` directory). Rather than passing raw code blindly to the LLM, these prompts enforce strict, professional boundaries:
 
-- **`functional_prompt.py`**: A Senior Functional Analyst prompt designed to extract exact business processes. It explicitly forces the LLM to map out atomic API calls, specific "If Yes/If No" logical branches, and targeted user notifications without diving into the underlying code syntax. It mandates a strict ASCII logical flow diagram generated natively from complex inputs like Power Automate definitions.
-- **`technical_prompt.py`**: A Senior Architect prompt that intelligently adapts its output based entirely on the project type. It categorizes the project's "Technology Stack" into explicitly defined logical architecture layers based on the context (e.g., separating Web Apps from Desktop Apps or Workflow Automation platforms).
+- **`functional_prompt.py`**: Designed to extract exact business processes. It explicitly forces the LLM to map out atomic API calls, specific "If Yes/If No" logical branches, and targeted user notifications without diving into the underlying code syntax. It mandates a strict logical flow diagram generated natively from complex inputs like Power Automate definitions.
+- **`technical_prompt.py`**: Intelligently adapts its output based entirely on the project type. It categorizes the project's "Technology Stack" into explicitly defined logical architecture layers based on the context (e.g., separating Web Apps from Desktop Apps or Workflow Automation platforms).
 - **Hardened Security Prompts**: **Every** prompt inherently instructs the AI to strictly mask, anonymize, and obfuscate any residual Personally Identifiable Information (emails, customer names), passwords, and valid HTTP endpoints that may have bypassed the initial sanitization regex check, enforcing ironclad security.
 
 ## 📝 System Logging & Token Auditing
@@ -124,11 +123,6 @@ By default, the engine seamlessly identifies, categorizes, and documents the fol
 When you upload your `.zip` sample source code or codebase, the system evaluates the payload and dynamically stitches together **clean, professional `.md` output files** ready for immediate download via the Streamlit UI:
 - `Functional_Documentation.md`: Translates complex raw logic (like massive JSON maps) into non-technical operational features, rigorously extracting loops, conditions (If Yes/If No branches), and notification targets into ASCII Process Flow Diagrams.
 - `Technical_Documentation.md`: Dissects and categorizes the underlying technology stack, intelligently structuring components based entirely on your architectural setup (e.g., placing Delphi gracefully into Desktop Layers, or Power Automate into Automation Platforms).
-
-## 🛡️ Security & Limitations
-
-- **Local Obfuscation:** Utilizing extensive regex boundaries, the underlying `sanitizer.py` engine strips generic Authentication Tokens, DB connection URIs, Emails, and Physical Addresses *locally* before any context is passed over API payloads to the generating LLMs.
-- **Model Context Limitations:** Running massive enterprise monolithic codebases requires vast context evaluation lengths. Keep in mind that documentation depth bounds tightly to the Token Context Window of the supplied OpenAI models (e.g., `gpt-4o-mini`).
 
 ## Architectural Structure
 ```text
